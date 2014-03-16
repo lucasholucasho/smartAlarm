@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <%= stylesheet_link_tag    "application" %>    
+    <%= javascript_include_tag "application" %>
+
+    <title>TestLight</title>
+    <link href = "http://netdna.bootstrapcdn.com/bootswatch/3.1.1/cerulean/bootstrap.min.css" rel="stylesheet">
+    <style>
+    
+          html, body, #map-canvas {
+            height: 100%;
+            margin: 0px;
+            padding: 0px
+          }
+          #panel {
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            margin-left: -180px;
+            z-index: 5;
+            background-color: #fff;
+            padding: 5px;
+            border: 1px solid #999;
+          }
+        </style>
+        <style>
+          #directions-panel {
+            height: 100%;
+            float: right;
+            width: 490px;
+            overflow: auto;
+          }
+
+          #map-canvas {
+            margin-right: 400px;
+          }
+
+          @media print {
+            #map-canvas {
+              height: 500px;
+              margin: 0;
+            }
+
+            #directions-panel {
+              float: none;
+              width: auto;
+            }
+          }
+        </style>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
